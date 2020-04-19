@@ -1,0 +1,6 @@
+# игнорировать файл Readme.md
+Readme.md
+
+# игнорировать файлы в директории build
+/node_modules
+
