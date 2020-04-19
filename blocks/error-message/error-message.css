@@ -1,0 +1,20 @@
+.error-name{
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    transform: translate(0, -24px); 
+}
+.error-about{
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    transform: translate(0, -24px); 
+}
+.error-name:last-of-type {
+    transform: translate(0, 0);
+  }
+  .error-about:last-of-type {
+    transform: translate(0, 0);
+  }

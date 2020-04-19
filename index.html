@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button type="submit"class="button user-info__edit">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+    </div>
+    <div class="popup popup-add">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required>
+            <input type="text" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required>
+            <button type="submit" class="button popup__button popup__button-add">+</button>
+        </form>
+      </div>
+    </div>
+    <!-- Добавила свой popup для корректировки персональной информации-->
+    <div class="popup popup-edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit" novalidate>
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" minlength="2" maxlength="30" required >
+            <div class="error-name error-message_hidden">Обязательное поле</div>
+            <input type="text" name="about" class="popup__input popup__input_type_link-url" placeholder="О себе" minlength="2" maxlength="30" required >
+            <div class="error-about error-message_hidden">Обязательное поле</div>
+            <button type="submit" class="button popup__button popup__button-save popup__button_enable">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <!-- Попап с картинкой -->
+    <div class="popup popup-image">
+      <div class="popup__content-image"> 
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <div class="popup__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+        </div>
+      </div> 
+    </div>  
+
+  </div>
+  
+        <!-- Пример вёрстки карточки: -->
+        <!-- Вынесла код шаблонной вёрстки сюда, чтобы можно было очищать 
+        places-list спокойно -->
+        <template data-componet="card">
+          <div class="place-card">
+            <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+              <button class="place-card__delete-icon"></button>
+            </div>
+            <div class="place-card__description">
+              <h3 class="place-card__name">Камчатка</h3>
+              <button class="place-card__like-icon"></button>
+            </div>
+          </div>
+        </template>
+    
+          <!-- конец примера. -->
+          <script src="js/initialCards.js"></script> 
+          <script src="js/CardList.js"></script> 
+          <script src="js/Card.js"></script> 
+          <script src="js/Popup.js"></script> 
+          <script src="js/UserInfo.js"></script> 
+          <script src="js/FormValidator.js"></script> 
+          <script src="js/Api.js"></script> 
+          
+          
+  <script src="script.js"> </script>
+</body>
+</html>
+
