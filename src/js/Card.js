@@ -1,5 +1,5 @@
 
-class Card {
+export class Card {
   constructor(name, link, _id1) {
     this.name = name;
     this.link = link;

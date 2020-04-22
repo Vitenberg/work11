@@ -1,5 +1,5 @@
 
-class Popup { 
+export class Popup { 
     constructor(type) {
         this.type = type;
     }

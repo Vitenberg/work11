@@ -1,6 +1,6 @@
-
-class CardList {
-    constructor(placesList1) {
+import {Card} from './Card.js';
+export class CardList {
+    constructor(placesList1, api) {
         this.placesList1 = placesList1;
         this.api = api;
     }
@@ -16,7 +16,7 @@ class CardList {
         });
     }
     render() {
-        api.getInitialCards()
+        this.api.getInitialCards()
             .then((result) => {
                 for (const elem of result){
                     let card = new Card(elem.name, elem.link);

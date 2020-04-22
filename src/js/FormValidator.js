@@ -1,4 +1,4 @@
-class FormValidator {
+export class FormValidator {
   constructor(form) {
     this.form = form;
 
@@ -20,7 +20,7 @@ class FormValidator {
       submitButton.classList.add('popup__button_enable');
     }
   }
-  checkInputValidity1 = (elemField, elemError) => {
+  checkInputValidity1(elemField, elemError){
     if (elemField.validity.valueMissing) {
       elemError.classList.remove('error-message_hidden');
       elemError.textContent = 'Это обязательное поле';

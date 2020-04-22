@@ -1,4 +1,4 @@
-class UserInfo { 
+export class UserInfo { 
     constructor(api) {
         this.name = '';
         this.about = '';

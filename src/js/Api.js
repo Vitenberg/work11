@@ -1,4 +1,4 @@
-class Api {
+export class Api {
     constructor (conf){
         this.authorization = conf.authorization;
         this.url = conf.url;
