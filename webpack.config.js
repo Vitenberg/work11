@@ -21,17 +21,11 @@ module.exports = {
                     use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
                     exclude: /node_modules/ // исключает папку node_modules
                 },
-               // {
-                 //   test: /\.css$/, // применять это правило только к CSS-файлам
-                   // use: [MiniCssExtractPlugin.loader, 'css-loader'] // к этим файлам нужно применить пакеты, которые мы уже установили
-                //},
                 {
                     test: /\.css$/i,
-                    use: [
-                                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                                     'css-loader', 
-                                    'postcss-loader'
-                            ]
+                                    'postcss-loader']
                 },
                 { //обработка шрифтов
                     test: /\.(eot|ttf|woff|woff2)$/,
@@ -39,12 +33,10 @@ module.exports = {
                 },
                 {
                     test: /\.(png|jpg|gif|ico|svg)$/,
-                    use: [
-                            'file-loader?name=../images/[name].[ext]', // указали папку, куда складывать изображения
-                            {
-                                    loader: 'image-webpack-loader',
-                                    options: {}
-                            },
+                    use: ['file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
+                        {loader: 'image-webpack-loader',
+                            options: {}
+                        },
                     ]
                 },
 
@@ -58,9 +50,7 @@ module.exports = {
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
-            cssProcessorPluginOptions: {
-                    preset: ['default'],
-            },
+            cssProcessorPluginOptions: { preset: ['default'],},
             canPrint: true
         }), 
         new HtmlWebpackPlugin({ // настроили плагин
