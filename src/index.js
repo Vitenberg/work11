@@ -8,6 +8,7 @@ import {Popup} from './js/Popup.js';
 import {UserInfo} from './js/UserInfo.js';
 import {initialCards} from './js/initialCards.js'
 
+
 //Переменные
 const placesList = document.querySelector('.places-list');
 const addCardButton = document.querySelector('.user-info__button');
