@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://Vitenberg.github.io/work11/",
   "description": "npm learning",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Vitenberg/work11/issues"
   },
-  "homepage": "https://github.com/Vitenberg/work11#readme",
+  
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",

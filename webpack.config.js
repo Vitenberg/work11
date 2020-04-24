@@ -12,7 +12,6 @@ module.exports = {
     entry: { main: './src/index.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        //filename: 'main.js'
         filename: '[name].[chunkhash].js'
     },
     module: {
@@ -44,7 +43,6 @@ module.exports = {
         },
     plugins: [ 
         new MiniCssExtractPlugin({
-            //filename: 'style.css'
             filename: 'style.[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
@@ -55,7 +53,6 @@ module.exports = {
         }), 
         new HtmlWebpackPlugin({ // настроили плагин
             inject: false,
-          //  hash: true,
             template: './src/index.html',
             filename: 'index.html'
         }),
